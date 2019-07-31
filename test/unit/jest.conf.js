@@ -2,13 +2,9 @@ const path = require('path')
 
 module.exports = {
   rootDir: path.resolve(__dirname, '../../'),
-  moduleFileExtensions: [
-    'js',
-    'json',
-    'vue'
-  ],
+  moduleFileExtensions: ['js', 'json', 'vue'],
   moduleNameMapper: {
-    '^@/(.*)$': '<rootDir>/src/$1'
+    '^@/(.*)$': '<rootDir>/example/$1'
   },
   transform: {
     '^.+\\.js$': '<rootDir>/node_modules/babel-jest',
@@ -19,9 +15,9 @@ module.exports = {
   mapCoverage: true,
   coverageDirectory: '<rootDir>/test/unit/coverage',
   collectCoverageFrom: [
-    'src/**/*.{js,vue}',
-    '!src/main.js',
-    '!src/router/index.js',
+    'example/**/*.{js,vue}',
+    '!example/main.js',
+    '!example/router/index.js',
     '!**/node_modules/**'
   ]
 }
