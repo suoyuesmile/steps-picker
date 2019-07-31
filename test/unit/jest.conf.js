@@ -4,7 +4,7 @@ module.exports = {
   rootDir: path.resolve(__dirname, '../../'),
   moduleFileExtensions: ['js', 'json', 'vue'],
   moduleNameMapper: {
-    '^@/(.*)$': '<rootDir>/example/$1'
+    '^@/(.*)$': '<rootDir>/examples/$1'
   },
   transform: {
     '^.+\\.js$': '<rootDir>/node_modules/babel-jest',
@@ -15,9 +15,9 @@ module.exports = {
   mapCoverage: true,
   coverageDirectory: '<rootDir>/test/unit/coverage',
   collectCoverageFrom: [
-    'example/**/*.{js,vue}',
-    '!example/main.js',
-    '!example/router/index.js',
+    'examples/**/*.{js,vue}',
+    '!examples/main.js',
+    '!examples/router/index.js',
     '!**/node_modules/**'
   ]
 }
